@@ -88,8 +88,17 @@ var finances = [
 ];
 
 
+let date;
+let amount;
+let month = finances.length
+let change = 0
+let total = 0
+let least = [ "" ,999999999]
+let greatest = ["" , 0]
+
 for (let i = 0; i < finances.length; i++) {
     const [date, amount ] = finances[i];
     console.log(date);
     console.log(amount);
 }
+
