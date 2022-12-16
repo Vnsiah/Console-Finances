@@ -88,6 +88,8 @@ var finances = [
 ];
 
 
+
+
 let date;
 let amount;
 let month = finances.length
@@ -98,7 +100,28 @@ let greatest = ["" , 0]
 
 for (let i = 0; i < finances.length; i++) {
     const [date, amount ] = finances[i];
-    console.log(date);
-    console.log(amount);
+    // console.log(date);
+    // console.log(amount);
+    // console.log(finances [i + 1]);
+    const [ seconddate, secondamount] = finances [i + 1];
+    // console.log( amount - secondamount )
+    const netprofit = amount - secondamount
+
+    if (netprofit > greatest[1]) { 
+        // console.log(greatest[1])
+        greatest[1] = netprofit
+        console.log(greatest)
+        greatest[0] = date
+
+
+    }
+
+    if (netprofit < least[1]) { 
+        // console.log(greatest[1])
+        least[1] = netprofit
+        // console.log(least [1])
+        least [0] = seconddate
+        console.log(least)
+    }
 }
 
