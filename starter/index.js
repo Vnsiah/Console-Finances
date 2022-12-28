@@ -103,7 +103,7 @@ for (let i = 0; i < finances.length; i++) {
     // console.log(date);
     // console.log(amount);
     // console.log(finances [i + 1]);
-    const [ seconddate, secondamount] = finances [i + 1];
+    const [seconddate, secondamount] = finances[i + 1]
     // console.log( amount - secondamount )
     const netprofit = amount - secondamount
 
